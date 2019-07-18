@@ -4,7 +4,7 @@ import { fetchAdmins } from '../actions';
 
 class AdminsListPage extends Component {
   componentDidMount() {
-    this.props.fetchAdmins
+    this.props.fetchAdmins()
   }
 
   renderAdmins() {
@@ -17,7 +17,7 @@ class AdminsListPage extends Component {
     return (
       <div>
         <h3>Protected list of admins</h3>
-        <ul>{this.renderAdmins}</ul>
+        <ul>{this.renderAdmins()}</ul>
       </div>
     )
   }
