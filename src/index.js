@@ -34,6 +34,7 @@ app.get('*', (req, res) => {
     const context = {};
     const content = renderer(req, store, context)
 
+    console.log(context);
     if (context.notFound) {
       res.status(404);
     }
